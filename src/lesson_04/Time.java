@@ -14,8 +14,6 @@ public class Time {
     private int seconds;
     private int minutes;
 
-    private Time(){
-    }
 
     private Time(int seconds) {
         this.seconds = 3000;
@@ -26,11 +24,12 @@ public class Time {
         this.hours = hours;
         this.minutes = minutes;
         this.seconds = seconds;
-              }
+        
+    }
 
-     public int getHours() {
+    public int getHours() {
         return hours;
-     }
+    }
 
     public int getMinutes() {
         return minutes;
@@ -40,22 +39,27 @@ public class Time {
         return seconds;
     }
 
-    public int toSeconds() {
-        final int i = hours * 3600 + minutes * 60 + seconds;
-        return i;
+    public int returnAllSecond() {
+        return hours * 3600 + minutes * 60 + seconds;
+
     }
-    public String getTime(int s){
-        int hours = s / 3600;
-        int minutes = (s % 3600) / 60;
-        int seconds = s % 60;
-        return  hours + "ч " + minutes + "мин " + seconds+ "сек ";
-            }
+
+    public void printAllTime() {
+        this.hours = seconds / 3600;
+        this.minutes = (seconds % 3600) / 60;
+        this.seconds = seconds % 60;
+        System.out.println(seconds);
+
+    }
 
     public static void main(String[] args) {
-        Time time = new Time();
-        Time time1 = new Time(3000);
+        Time time = new Time(3000);
         Time time2 = new Time(5, 35, 45);
+        time.printAllTime();
+        time2.printAllTime();
 
-        System.out.println(time);
     }
 }
+
+
+
