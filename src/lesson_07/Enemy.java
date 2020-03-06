@@ -3,9 +3,7 @@ package lesson_07;
         Добавить конструктор, принимающий количество здоровья, а также сеттер и геттер.
         Добавить метод takeDamage(int damage), который уменьшает количество здоровья в соответствии с полученным уроном.*/
 
-    interface Mortal {
-    void isAlive();
-           }
+
 
 public class Enemy implements Mortal {
     private int health;
