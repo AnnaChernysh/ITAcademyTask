@@ -9,12 +9,24 @@ public class BigDecimal{
     BigDecimal bd1;
     BigDecimal bd2;
 
-    public class  newCount{
-    this.bd1 = new BigDecimal(bd1);
-    this.bd1 = new BigDecimal(bd1)
+    public class  newCount(int i, int y){
+    this.bd1 = new BigDecimal(i);
+    this.bd1 = new BigDecimal(y);
 }
+    public class  newCount(double i, double y){
+        this.bd1 = new BigDecimal(i);
+        this.bd1 = new BigDecimal(y);
+    }
+    public class  newCount(int i, double y){
+        this.bd1 = new BigDecimal(i);
+        this.bd1 = new BigDecimal(y);
+    }
+    public class  newCount(double i, int y){
+        this.bd1 = new BigDecimal(i);
+        this.bd1 = new BigDecimal(y);
+    }
     public static void main(String[] args) {
-        Sistem.out.println
+        Sistem.out.println(new newCount(3,9) addAsBigDecimal());
 
             public double sum(double a, double b){
             return a + b;
@@ -47,7 +59,6 @@ public class BigDecimal{
 
             }
         }
-
     private BigDecimal add(BigDecimal bd2) {
     }
 
