@@ -4,15 +4,17 @@ package lesson_05;
         Задать перегруженные методы возвращающие результат арифметических операций над заданными полями и полями типа BigDecimal.*/
 
 
-
 public class BigDecimal{
-        public static void main(String[] args) {
-        double a = 3.8;
-        double b = 5.9;
 
-            BigDecimal bd1 = new BigDecimal(double a);
-            BigDecimal bd2 = new BigDecimal(double b);
+    BigDecimal bd1;
+    BigDecimal bd2;
 
+    public class  newCount{
+    this.bd1 = new BigDecimal(bd1);
+    this.bd1 = new BigDecimal(bd1)
+}
+    public static void main(String[] args) {
+        Sistem.out.println
 
             public double sum(double a, double b){
             return a + b;
