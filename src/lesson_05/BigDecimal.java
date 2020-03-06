@@ -13,21 +13,21 @@ public class BigDecimal{
     double doubleArg1;
     double doubleArg2;
 
-    public class newCount(int arg1, int arg2){
+    public newCount(int arg1, int arg2){
     this.arg1 = new BigDecimal(arg1);
     this.arg2 = new BigDecimal(arg2);
 }
-    public class  newCount(double arg1, double arg2){
+    public newCount(double arg1, double arg2){
         this.doubleArg1 = new BigDecimal(arg1);
         this.doubleArg2 = new BigDecimal(doubleArg2);
     }
-    public class  newCount(int arg1, double arg2){
+    public newCount(int arg1, double arg2){
         this.intArg1 = arg1;
         this.doubleArg1 = arg2;
         this.arg1 = new BigDecimal(arg1);
         this.arg2 = new BigDecimal(arg2);
     }
-    public class  newCount(double arg2, int arg1){
+    public newCount(double arg2, int arg1){
         this.doubleArg2 = arg2;
         this.intArg1 = arg1;
         this.arg1 = new BigDecimal(arg1);
@@ -35,11 +35,11 @@ public class BigDecimal{
             }
 
     public static void main(String[] args) {
-        newCount nc = new newCount();
+        
         System.out.println(new newCount(3,9)(addAsBigDecimal());
     }
 
-        public double addAsBigDecimal( doubleArg1, doubleArg2){
+        public double add( doubleArg1, doubleArg2){
             return doubleArg1 + doubleArg2;
         }
 
