@@ -35,38 +35,42 @@ public class BigDecimal{
             }
 
     public static void main(String[] args) {
-        System.out.println(new newCount(3, 9)addAsBigDecimal());
+        newCount nc = new newCount();
+        System.out.println(new newCount(3,9)(addAsBigDecimal());
     }
 
-        public double sum ( doubleArg1, doubleArg2){
+        public double addAsBigDecimal( doubleArg1, doubleArg2){
             return doubleArg1 + doubleArg2;
         }
-        public BigDecimal sum (arg1, arg2){
-            return arg1.add(arg2);
+
+    private BigDecimal add(BigDecimal arg1, BigDecimal arg2) {
+        return arg1.add(arg2);
     }
-        public double multiply (doubleArg1, doubleArg2){
+
+    public double multiply (doubleArg1, doubleArg2){
             return doubleArg1 * doubleArg2;
         }
-        public BigDecimal multiply (arg1, arg2){
-            return arg1.multiply(arg2);
+     public BigDecimal multiply (arg1, arg2){
+         return arg1.multiply(arg2);
 
         }
-        public double substract ( doubleArg1, doubleArg2){
+     public double substract ( doubleArg1, doubleArg2) {
             return doubleArg1 - doubleArg2;
         }
-        public BigDecimal substract (arg1, arg2){
-           return arg1.subtract(arg2);
-                    }
 
-        public double devide ( doubleArg1, doubleArg2){
-            return doubleArg1 / doubleArg2;
-        }
-        public BigDecimal devide (arg1, arg2){
-            return arg1.divide(arg2);
-
-        }
+    public BigDecimal subtract(BigDecimal arg2, BigDecimal arg2) {
+        return arg1.subtract(arg2);
     }
 
-    private static Object addAsBigDecimal() {
+
+    public double devide ( doubleArg1, doubleArg2){
+         return doubleArg1 / doubleArg2;
+        }
+
+    public BigDecimal divide(BigDecimal arg1, BigDecimal arg2) {
+        return arg1.divide(arg2);
+
     }
+}
+
 
