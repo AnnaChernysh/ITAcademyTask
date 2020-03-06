@@ -6,28 +6,40 @@ package lesson_05;
 
 public class BigDecimal{
 
-    BigDecimal bd1;
-    BigDecimal bd2;
+    BigDecimal arg1;
+    BigDecimal arg2;
+    int intArg1;
+    int intArg2;
+    double doubleArg1;
+    double doubleArg2;
 
-    public class  newCount(int i, int y){
-    this.bd1 = new BigDecimal(i);
-    this.bd1 = new BigDecimal(y);
+    public class  newCount(int arg1, int arg2){
+    this.arg1 = new BigDecimal(arg1);
+    this.arg2 = new BigDecimal(arg2);
 }
     public class  newCount(double i, double y){
-        this.bd1 = new BigDecimal(i);
-        this.bd1 = new BigDecimal(y);
+        this.arg1 = new BigDecimal(arg1);
+        this.arg2 = new BigDecimal(doubleArg2);
     }
-    public class  newCount(int i, double y){
-        this.bd1 = new BigDecimal(i);
-        this.bd1 = new BigDecimal(y);
+    public class  newCount(int arg1, double arg2){
+        this.intArg1 = arg1;
+        this.doubleArg1 = arg2;
+        this.arg1 = new BigDecimal(arg1);
+        this.arg2 = new BigDecimal(arg2);
     }
-    public class  newCount(double i, int y){
-        this.bd1 = new BigDecimal(i);
-        this.bd1 = new BigDecimal(y);
+    public class  newCount(double arg2, int arg1){
+        this.doubleArg2 = new BigDecimal(arg1);
+        this.intArg1 = new BigDecimal(arg2);
     }
+
     public static void main(String[] args) {
         Sistem.out.println(new newCount(3,9) addAsBigDecimal());
 
+
+    BigDecimal addAsBigDecimal(){
+         return arg1.devide(arg2);
+        }
+int add asInte
             public double sum(double a, double b){
             return a + b;
         }
