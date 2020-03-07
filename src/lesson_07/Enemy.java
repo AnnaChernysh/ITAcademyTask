@@ -4,9 +4,18 @@ package lesson_07;
         Добавить метод takeDamage(int damage), который уменьшает количество здоровья в соответствии с полученным уроном.*/
 
 
-
 public class Enemy implements Mortal {
+
     private int health;
+    public void boolean isAlive() {
+        boolean result;
+        if (health > 0) {
+            result = true;
+        } else {
+            result = false;
+        }
+        return result;
+    }
 
     public Enemy(int health) {
         this.health = health;
@@ -27,15 +36,6 @@ public class Enemy implements Mortal {
         health -= damage;
            }
 
-    @Override
-    public boolean isAlive() {
-        boolean result;
-        if (health > 0) {
-            result = true;
-        } else {
-            result = false;
-        }
-        return result;
-    }
+
 }
 
