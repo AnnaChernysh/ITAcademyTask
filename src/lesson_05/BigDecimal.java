@@ -1,8 +1,6 @@
 package lesson_05;
-        /*Определить класс, который при инициализации принимает на вход 2 аргумента целого (byte,short,int,long)
-        или вещественного типа(float,double)
-        Задать перегруженные методы возвращающие результат арифметических операций над заданными полями и полями типа BigDecimal.*/
 
+import java.math.BigDecimal;
 
 public class BigDecimal{
 
@@ -18,50 +16,47 @@ public class BigDecimal{
     this.arg2 = new BigDecimal(arg2);
 }
     public newCount(double arg1, double arg2){
-        this.doubleArg1 = new BigDecimal(arg1);
+        this.doubleArg1 = new BigDecimal(doubleArg1);
         this.doubleArg2 = new BigDecimal(doubleArg2);
     }
     public newCount(int arg1, double arg2){
         this.intArg1 = arg1;
         this.doubleArg1 = arg2;
         this.arg1 = new BigDecimal(arg1);
-        this.arg2 = new BigDecimal(arg2);
+        this.arg2 = new BigDecimal(doubleArg2);
     }
     public newCount(double arg2, int arg1){
         this.doubleArg2 = arg2;
         this.intArg1 = arg1;
-        this.arg1 = new BigDecimal(arg1);
-        this.arg2 = new BigDecimal(arg2);
+        this.arg1 = new BigDecimal(doubleArg2);
+        this.arg2 = new BigDecimal(arg1);
             }
 
     public static void main(String[] args) {
-        
-        System.out.println(new newCount(3,9)(addAsBigDecimal());
+
     }
 
-        public double add( doubleArg1, doubleArg2){
+    public double add( doubleArg1, doubleArg2){
             return doubleArg1 + doubleArg2;
         }
 
-    private BigDecimal add(BigDecimal arg1, BigDecimal arg2) {
+    public BigDecimal add(BigDecimal arg1, BigDecimal arg2) {
         return arg1.add(arg2);
     }
 
     public double multiply (doubleArg1, doubleArg2){
             return doubleArg1 * doubleArg2;
         }
-     public BigDecimal multiply (arg1, arg2){
-         return arg1.multiply(arg2);
 
-        }
-     public double substract ( doubleArg1, doubleArg2) {
+    public BigDecimal multiply (arg1, arg2){ return arg1.multiply(arg2); }
+
+    public double substract ( doubleArg1, doubleArg2) {
             return doubleArg1 - doubleArg2;
         }
 
     public BigDecimal subtract(BigDecimal arg2, BigDecimal arg2) {
         return arg1.subtract(arg2);
     }
-
 
     public double devide ( doubleArg1, doubleArg2){
          return doubleArg1 / doubleArg2;
@@ -72,5 +67,4 @@ public class BigDecimal{
 
     }
 }
-
 
