@@ -5,7 +5,6 @@ package lesson_07;
 
 
 public class Enemy implements Mortal {
-
     private int health;
     public void boolean isAlive() {
         boolean result;
