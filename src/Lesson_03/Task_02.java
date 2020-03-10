@@ -1,4 +1,4 @@
-package Lesson_03;
+/*package Lesson_03;
 
 public class Task_02 {
 
@@ -20,4 +20,4 @@ public class Task_02 {
             } while (amount != 100);
         }
     }
-}
+}*/
