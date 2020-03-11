@@ -1,5 +1,7 @@
 package lesson_07;
 
-public class BattleGround {
+public class BattleGround  {
+    Hero hero = new Hero;
+
 
 }

@@ -1,3 +1,4 @@
+
 package lesson_07;
 
 public class Mage extends Hero {
@@ -6,3 +7,4 @@ public class Mage extends Hero {
         System.out.println("Герой атакует врага.");
     }
     }
+

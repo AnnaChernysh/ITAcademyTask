@@ -1,3 +1,4 @@
+/*
 package lesson_07;
 
 public class Archer extends Hero {
@@ -10,3 +11,4 @@ public class Archer extends Hero {
        int damage1 = health-=damage;
     }
     }
+*/

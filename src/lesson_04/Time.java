@@ -24,7 +24,7 @@ public class Time {
         this.hours = hours;
         this.minutes = minutes;
         this.seconds = seconds;
-        
+
     }
 
     public int getHours() {

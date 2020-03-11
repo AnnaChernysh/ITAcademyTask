@@ -1,6 +1,8 @@
+/*
 package lesson_07;
 
-       /* Создать класс Hero, представляющий собой героя и содержащий поле name.
+       */
+/* Создать класс Hero, представляющий собой героя и содержащий поле name.
         Добавить конструктор, принимающий имя героя и геттер для имени (сеттер не нужен).
         Добавить метод attackEnemy(), выводящий в консоль сообщение о том, что герой атакует врага.
         Создать класс TrainingGround, содержащий метод main. Протестировать создание героя и его атаку.
@@ -10,14 +12,19 @@ package lesson_07;
 
 */
 
+
 public abstract class Hero {
+
     String name;
     int health;
     int damage;
 
-    public Hero(String name, int health) {
+
+    public Hero(String name, int health, int damage) {
         this.name = name;
         this.health = health;
+        this.damage = damage;
+
     }
 
     public String getName() {
