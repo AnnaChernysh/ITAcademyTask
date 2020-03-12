@@ -20,13 +20,10 @@ public class Task_06 {
                 str += c;
             }
         }
-
         return str;
     }
-
     public static void main(String[] args)
     {
-
         String s = "fgsfdjkfgdjhskflg";
 
         System.out.println(uni(s));
