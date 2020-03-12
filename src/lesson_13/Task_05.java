@@ -7,7 +7,6 @@ public class Task_05 {
          public static void main(String[] args) {
 
              Scanner sc = new Scanner(System.in);
-
              System.out.println("Введите текст");
 
              String input = sc.nextLine();
@@ -23,7 +22,6 @@ public class Task_05 {
                      }
                  }
              }
-
              System.out.println("Количество слов:" + count);
          }
 }

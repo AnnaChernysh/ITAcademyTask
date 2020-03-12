@@ -1,7 +1,6 @@
 package lesson_13;
 //Написать функцию, принимающую 2 параметра: строку и слово - и возвращающую true,
 // если строка начинается и заканчивается этим словом.
-
 public class Task_03 {
 
     public static void main(String[] args) {

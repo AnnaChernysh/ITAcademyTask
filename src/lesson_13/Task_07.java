@@ -16,7 +16,6 @@ public class Task_07 {
 
               }
        }
-
 //Второй способ:
 
 public class Task_07 {
