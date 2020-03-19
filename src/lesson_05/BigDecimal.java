@@ -1,3 +1,4 @@
+/*
 package lesson_05;
 
 import java.math.BigDecimal;
@@ -67,4 +68,5 @@ public class BigDecimal{
 
     }
 }
+*/
 
