@@ -1,86 +1,88 @@
 
 package lesson_10;
 
-/* Ввести с консоли число, занести его цифры в стек.
+ /*Ввести с консоли число, занести его цифры в стек.
         Стек – самостоятельно спроектированный класс, поддерживающий 3 операции:
         •	Задать размер стека.
         •	Внести цифру в стек.
         •	Извлечь цифру из стека.
         Вывести число, у которого цифры идут в обратном порядке.
 */
-import java.util.List;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Stack {
 
-    private List<Integer> stack;
-    private int top;
-    private static final int SIZE = 10;
 
+   private int arr[];
+   private int top;
+   private int size;
+   private int capacity;
+
+    public Stack(int n)
     {
-        stack = new ArrayList<Integer>(SIZE);
+        size = n;
+        capacity = 0;
+        arr = new int[size];
+        top = -1;
     }
 
-    private Stack(int size) {
+    public boolean isEmpty()
+    {
+        return top == -1;
     }
 
-    private void push(int i) {
-        stack.add(0, i);
+    public boolean isFull()
+    {
+        return top == size -1 ;
     }
 
-    private int pop() {
-        if (!stack.isEmpty()) {
-            int i = stack.get(0);
-            stack.remove(0);
-            return i;
-        } else {
-            return -1;
+    public int getSize()
+    {
+        return capacity ;
+    }
+
+    public void push(int i)
+    {
+
+        if(top + 1 < size )
+            arr[++top] = i;
+        capacity++ ;
+    }
+    public int pop() {
+        if (!isEmpty()) {
+            capacity--;
+            return arr[top--];
         }
+        return 0;
     }
 
-    private boolean isEmpty() {
-        int index = 0;
-        if (index == 0) {
-            return true;
+        public static void main(String[] args) {
+
+            System.out.println("Введите число ");
+            int opt=0;
+            int val;
+            Stack stk = new Stack(opt);
+
+            System.out.println("1. PUSH ");
+            System.out.println("2. POP ");
+
+            Scanner s = new Scanner(System.in);
+            opt = s.nextInt();
+
+                switch (opt) {
+                    case 1:
+                        System.out.println("Введите число: ");
+                        val = s.nextInt();
+                        stk.push(val);
+                        break;
+
+                    case 2:
+                        stk.pop();
+                        break;
+                }
+
+                          }
         }
-        return false;
-
-    }
-
-    public static void main(String[] args) {
-
-        Stack myStack = new Stack(SIZE);
-        Scanner scan = new Scanner(System.in);
-
-        //Push
-        System.out.println("Введите число");
-        while (scan.hasNextInt()) {
-            int i = scan.nextInt();
-            myStack.push(i);
-            System.out.println("Pushed " + i);
-        }
-
-        //Pop
-
-        while (!myStack.isEmpty()) {
-            System.out.println(myStack.pop());
-            scan.next();
 
 
-            System.out.println("Введите еще одно число");
-            while (scan.hasNextInt()) {
-                int i = scan.nextInt();
-                myStack.push(i);
-                System.out.println("Pushed " + i);
-            }
-
-
-            while (!myStack.isEmpty()) {
-                System.out.println("Popped " + myStack.pop());
-            }
-
-        }
-    }
-}
 
