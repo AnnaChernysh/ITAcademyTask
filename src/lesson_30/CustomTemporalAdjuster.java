@@ -10,7 +10,6 @@ import java.time.temporal.TemporalAdjuster;
 
 
 public class CustomTemporalAdjuster implements TemporalAdjuster {
-
     @Override
     public Temporal adjustInto(Temporal temporal) {
     DayOfWeek dayOfWeek = DayOfWeek.of(temporal.get(ChronoField.DAY_OF_WEEK));

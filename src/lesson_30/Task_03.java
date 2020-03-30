@@ -11,6 +11,7 @@ import java.util.Date;
        // Преобразовать дату в строку вида "05.05.2017". Вывести эту строку в консоль
 public class Task_03 {
     public static void main(String[] args) {
+
         LocalDate date = LocalDate.now();
         String pattern = "dd.MM.yyyy";
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);

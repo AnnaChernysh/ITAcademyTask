@@ -1,7 +1,7 @@
 package lesson_30;
 
 import java.time.*;
-import java.time.temporal.ChronoUnit;
+
 
 //Даны два объекта LocalDate из предыдущего задания.
  //  Подсчитать количество секунд между полуночью первой даты и полуночью второй даты.
