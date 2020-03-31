@@ -12,7 +12,7 @@ public class Person {
     private String firstName;
     private String lastName;
     private int age;
-    public String contact;
+
 
     public Person() {
     }
@@ -33,12 +33,12 @@ public class Person {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
-        this.contact = contact;
+
     }
 
     public String toString() {
         return "[" + firstName + " " + lastName +
-                " " + age + " " + contact + "]";
+                " " + age + " ]";
     }
 
 
