@@ -1,72 +1,59 @@
-/*
+
 package lesson_05;
 
 import java.math.BigDecimal;
 
-public class BigDecimal{
+class OverloadingOfMethods {
 
-    BigDecimal arg1;
-    BigDecimal arg2;
-    int intArg1;
-    int intArg2;
-    double doubleArg1;
-    double doubleArg2;
+    int summOverloading(int intNumberA, int intNumberB) {
+        int result = 0;
+        result = intNumberA + intNumberB;
 
-    public newCount(int arg1, int arg2){
-    this.arg1 = new BigDecimal(arg1);
-    this.arg2 = new BigDecimal(arg2);
-}
-    public newCount(double arg1, double arg2){
-        this.doubleArg1 = new BigDecimal(doubleArg1);
-        this.doubleArg2 = new BigDecimal(doubleArg2);
+        return result;
     }
-    public newCount(int arg1, double arg2){
-        this.intArg1 = arg1;
-        this.doubleArg1 = arg2;
-        this.arg1 = new BigDecimal(arg1);
-        this.arg2 = new BigDecimal(doubleArg2);
+
+    double summOverloading(double doubleNumberA, double doubleNumberB) {
+        double result = 0;
+        result = doubleNumberA + doubleNumberB;
+
+        return result;
     }
-    public newCount(double arg2, int arg1){
-        this.doubleArg2 = arg2;
-        this.intArg1 = arg1;
-        this.arg1 = new BigDecimal(doubleArg2);
-        this.arg2 = new BigDecimal(arg1);
-            }
+
+    BigDecimal summOverloading(BigDecimal bigDecimalNumberA, BigDecimal bigDecimalNumberB) {
+        BigDecimal result = null;
+        result = bigDecimalNumberA.add(bigDecimalNumberB);
+
+        return result;
+    }
+
 
     public static void main(String[] args) {
 
-    }
+        int intNumberA = 50;
+        int intNumberB = 120;
+        double doubleNumberA = 50.5;
+        double doubleNumberB = 35115.45;
 
-    public double add( doubleArg1, doubleArg2){
-            return doubleArg1 + doubleArg2;
-        }
+        int resultIntNumbers = 0;
+        double resultDoubleNumbers = 0;
+        BigDecimal resultBigDecimalNumbers = null;
 
-    public BigDecimal add(BigDecimal arg1, BigDecimal arg2) {
-        return arg1.add(arg2);
-    }
+        BigDecimal bigDecimalNumberA = new BigDecimal("1111111111111111.12312312");
+        BigDecimal bigDecimalNumberB = new BigDecimal("2222222222222222.12323243");
 
-    public double multiply (doubleArg1, doubleArg2){
-            return doubleArg1 * doubleArg2;
-        }
+        OverloadingOfMethods overloadingObj = new OverloadingOfMethods();
 
-    public BigDecimal multiply (arg1, arg2){ return arg1.multiply(arg2); }
+        resultIntNumbers = overloadingObj.summOverloading(intNumberA, intNumberB);
+        System.out.println("Sum of " + intNumberA + " + " + intNumberB + " = "
+                + resultIntNumbers);
 
-    public double substract ( doubleArg1, doubleArg2) {
-            return doubleArg1 - doubleArg2;
-        }
+        resultDoubleNumbers = overloadingObj.summOverloading(doubleNumberA, doubleNumberB);
+        System.out.println("Sum of " + doubleNumberA + " + " + doubleNumberB + " = "
+                + resultDoubleNumbers);
 
-    public BigDecimal subtract(BigDecimal arg2, BigDecimal arg2) {
-        return arg1.subtract(arg2);
-    }
-
-    public double devide ( doubleArg1, doubleArg2){
-         return doubleArg1 / doubleArg2;
-        }
-
-    public BigDecimal divide(BigDecimal arg1, BigDecimal arg2) {
-        return arg1.divide(arg2);
+        resultBigDecimalNumbers = overloadingObj.summOverloading(bigDecimalNumberA, bigDecimalNumberB);
+        System.out.println("Sum of " + bigDecimalNumberA + " + " + bigDecimalNumberB + " = "
+                + resultBigDecimalNumbers);
 
     }
 }
-*/
-
