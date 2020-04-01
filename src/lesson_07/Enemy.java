@@ -1,41 +1,53 @@
 package lesson_07;
-       //* Создать класс Enemy, представляющий собой врага и содержащий поле health (количество здоровья).
-//        Добавить конструктор, принимающий количество здоровья, а также сеттер и геттер.
-//        Добавить метод takeDamage(int damage), который уменьшает количество здоровья в соответствии с полученным уроном.*//
-
-
-public abstract class Enemy implements Mortal {
+abstract class Enemy implements Mortal {
     private String name;
     private int health;
-    private int damage;
+    private boolean reborn;
+    private boolean armour;
 
-    public Enemy(){
-
-    }
-
-    public Enemy(String name, int health, int damage1) {
+    Enemy(String name, int health) {
         this.name = name;
         this.health = health;
-        this.damage = damage1;
-
+        System.out.println("Enemy's health " + health);
     }
-    public String getName(){
+
+    public boolean getArmour() {
+        return armour;
+    }
+
+    public boolean getReborn() {
+        return reborn;
+    }
+
+    public void setReborn(boolean reborn) {
+        this.reborn = reborn;
+    }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public String getName() {
         return name;
     }
 
+    public void setHealth(int health) {
+        this.health = health;
+    }
 
-    public boolean isAlive() {
-        return health >0;
+    void takeDamage(int damage) {
+        health -= damage;
     }
 @Override
-public void attackEnemy(Mortal enemy){
-        enemy.takeDamage(getDamage());
-}
+    public boolean isAlive() {
 
-    private void getDamage(int damage) {
-        health -= damage;
-           }
+        if (health > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
-
+    abstract void attackHero(Hero heroObj);
 }
 
