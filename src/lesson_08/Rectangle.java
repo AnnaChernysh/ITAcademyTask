@@ -1,3 +1,4 @@
+/*
 package lesson_08;
 
 
@@ -54,4 +55,5 @@ public class Rectangle extends Shape implements Id {
         return null;
     }
 }
+*/
 

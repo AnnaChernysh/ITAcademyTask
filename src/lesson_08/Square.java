@@ -1,3 +1,4 @@
+/*
 package lesson_08;
 
 public class Square extends Shape implements Id {
@@ -42,3 +43,4 @@ public class Square extends Shape implements Id {
     }
 }
 
+*/

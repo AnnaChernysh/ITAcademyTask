@@ -1,3 +1,4 @@
+/*
 package lesson_08;
 
     public abstract class Point extends Shape {
@@ -23,3 +24,4 @@ package lesson_08;
         }
     }
 
+*/

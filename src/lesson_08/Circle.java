@@ -1,4 +1,4 @@
-package lesson_08;
+/*package lesson_08;
 
 public class Circle extends Shape implements Center, Id {
     private static final String NAME = "Circle";
@@ -41,6 +41,6 @@ public class Circle extends Shape implements Center, Id {
     public String getid() {
         return null;
     }
-}
+}*/
 
 

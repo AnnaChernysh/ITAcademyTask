@@ -1,3 +1,4 @@
+/*
 package lesson_08;
 
 public class AllShapes {
@@ -20,3 +21,4 @@ public class AllShapes {
         }
     }
 }
+*/

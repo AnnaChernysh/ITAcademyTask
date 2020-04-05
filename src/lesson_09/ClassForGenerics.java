@@ -1,3 +1,4 @@
+/*
 package lesson_09;
 
 public abstract class ClassForGenerics implements InterfaceforGenerics {
@@ -22,4 +23,5 @@ public abstract class ClassForGenerics implements InterfaceforGenerics {
 
 
         }
+*/
 
