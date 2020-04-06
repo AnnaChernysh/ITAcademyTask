@@ -1,44 +1,32 @@
-/*
+
 package lesson_09;
-        */
-/*Создать класс Pair, параметризованный двумя параметрами K и V.
+ /*
+Создать класс Pair, параметризованный двумя параметрами K и V.
         Класс должен хранить две переменные типов K и V соответственно. У класса должен быть конструктор,
-        принимающий 2 параметра типов K и V, а также набор соответствующих геттеров/сеттеров.*//*
+        принимающий 2 параметра типов K и V, а также набор соответствующих геттеров/сеттеров.*/
 
+public class Pair<K, V> {
+    protected K pairK;
+    protected V pairV;
 
-public class Pair <K, V> {
-    private K pairKey;
-    private V pairValue;
-
-    Pair(){
+    public Pair(K k, V v) {
+        this.pairK=k;
+        this.pairV=v;
     }
 
-    Pair (K pairKey, V pairValue) {
-        this.pairKey = pairKey;
-        this.pairValue = pairValue;
-
+    public K getPairK() {
+        return pairK;
     }
 
-    public K getPairKey() {
-        return pairKey;
+    public void setPairK(K pairK) {
+        this.pairK = pairK;
     }
 
-    public void setPairKey(K pairKey) {
-        this.pairKey = pairKey;
+    public V getPairV() {
+        return pairV;
     }
 
-    public V getPairValue() {
-        return pairValue;
+    public void setPairV(V pairV) {
+        this.pairV = pairV;
     }
-
-    public void setPairValue(V pairValue) {
-        this.pairValue = pairValue;
-    }
-
-    @Transaction
-    public static void transactionTesting() {
-        ApplicationLogger.LOGGER.info("Transaction processing, please wait");
-
-    }
-
-*/
+}
