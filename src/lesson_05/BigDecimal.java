@@ -5,21 +5,21 @@ import java.math.BigDecimal;
 
 class OverloadingOfMethods {
 
-    int summOverloading(int intNumberA, int intNumberB) {
+    int sumOverloading(int intNumberA, int intNumberB) {
         int result = 0;
         result = intNumberA + intNumberB;
 
         return result;
     }
 
-    double summOverloading(double doubleNumberA, double doubleNumberB) {
+    double sumOverloading(double doubleNumberA, double doubleNumberB) {
         double result = 0;
         result = doubleNumberA + doubleNumberB;
 
         return result;
     }
 
-    BigDecimal summOverloading(BigDecimal bigDecimalNumberA, BigDecimal bigDecimalNumberB) {
+    BigDecimal sumOverloading(BigDecimal bigDecimalNumberA, BigDecimal bigDecimalNumberB) {
         BigDecimal result = null;
         result = bigDecimalNumberA.add(bigDecimalNumberB);
 
@@ -38,20 +38,20 @@ class OverloadingOfMethods {
         double resultDoubleNumbers = 0;
         BigDecimal resultBigDecimalNumbers = null;
 
-        BigDecimal bigDecimalNumberA = new BigDecimal("1111111111111111.12312312");
-        BigDecimal bigDecimalNumberB = new BigDecimal("2222222222222222.12323243");
+        BigDecimal bigDecimalNumberA = new BigDecimal("123.12312312");
+        BigDecimal bigDecimalNumberB = new BigDecimal("234.12323243");
 
         OverloadingOfMethods overloadingObj = new OverloadingOfMethods();
 
-        resultIntNumbers = overloadingObj.summOverloading(intNumberA, intNumberB);
+        resultIntNumbers = overloadingObj.sumOverloading(intNumberA, intNumberB);
         System.out.println("Sum of " + intNumberA + " + " + intNumberB + " = "
                 + resultIntNumbers);
 
-        resultDoubleNumbers = overloadingObj.summOverloading(doubleNumberA, doubleNumberB);
+        resultDoubleNumbers = overloadingObj.sumOverloading(doubleNumberA, doubleNumberB);
         System.out.println("Sum of " + doubleNumberA + " + " + doubleNumberB + " = "
                 + resultDoubleNumbers);
 
-        resultBigDecimalNumbers = overloadingObj.summOverloading(bigDecimalNumberA, bigDecimalNumberB);
+        resultBigDecimalNumbers = overloadingObj.sumOverloading(bigDecimalNumberA, bigDecimalNumberB);
         System.out.println("Sum of " + bigDecimalNumberA + " + " + bigDecimalNumberB + " = "
                 + resultBigDecimalNumbers);
 
