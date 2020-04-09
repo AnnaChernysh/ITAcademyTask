@@ -9,48 +9,31 @@ package lesson_20;
         При вводе -1 программа должна завершать свою работу.*/
 
 
-import java.io.BufferedReader;
-import java.util.concurrent.Callable;
+
+import java.util.Scanner;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
-
-
-
-import java.io.*;
 import java.util.concurrent.*;
 
+public class InputReadTask {
+   public static boolean run = true;
 
-
-    public class InputReadTask implements Callable<String> {
-
-
-        public String call() throws IOException {
-            ExecutorService ex = Executors.newSingleThreadExecutor();
-
-            BufferedReader br = new BufferedReader(
-                    new InputStreamReader(System.in));
-            System.out.println("ConsoleInputReadTask run() called.");
-            String input = String.valueOf(Integer.parseInt(br.readLine()));
-
-            do {
-                System.out.println("Type a number: ");
-                try {
-                    while (!br.ready()) {
-                        Thread.sleep(Long.parseLong(br.readLine()));
-                    }
-
-                } catch (InterruptedException e) {
-                    System.out.println("I was sleeping " + input + "seconds");
-                }
-
-                Future<String> result = ex.submit(InputReadTask);
-                try {
-                    input = result.get();
-                } catch (ExecutionException | InterruptedException e) {
-                    e.getCause().printStackTrace();
-                }
-                if (input == "-1") {
-                    ex.shutdownNow();
-                }
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        ExecutorService service = Executors.newSingleThreadExecutor();
+        while (run) {
+            int time = scanner.nextInt();
+            if(time == -1){
+                service.shutdown();
             }
+            service.submit(() -> {
+                try {
+                    TimeUnit.SECONDS.sleep(time);
+                }catch (InterruptedException ex){
+                    ex.printStackTrace();
+                }
+                System.out.println("I've been sleeping for " + time + " seconds");
+            });
+        }
+    }
+}

@@ -5,42 +5,41 @@ package lesson_18;
         который каждую пятую миллисекунду выводит в консоль текущее значение просуммированных элементов.*/
 
         public class MyThread extends Thread {
+            public static long sum = 0;
 
-            public static int sum;
-
+            @Override
             public void run() {
-                int sum=0;
-                int even = 0;
-
-                System.out.println("Thread " + this.getName() + " State:" + this.getState());
-                for (int i=0; i<10000000; i++) {
-                    if (i%2 == 0 && i % 3 == 0)
+                for(int i = 1; i < 10000000; i++){
+                    if((i%2==0)&&(i%3==0)){
                         sum += i;
-
-                    if (i % 1000000 == 0) {
+                    } else if(i%1000000==0){
                         try {
                             Thread.sleep(10);
+                        }catch (InterruptedException ex){
+                            ex.printStackTrace();
+                        }
+                    }
+                }
+            }
+            public static long getSum() {
+                return sum;
+            }
+
+            public static void main(String[] args) {
+                Thread thread = new Thread(new MyThread());
+                Thread daemon = new Thread(()->    {
+                    for(int i = 1; i < 10000000; i++){
+                        System.out.println(MyThread.getSum());
+                        try {
+                            Thread.sleep(5);
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
                     }
-                }
-                System.out.println("Sum: " + sum);
-            }
-
-            public static void main(String[] args) throws InterruptedException {
-                MyThread t = new MyThread();
-                t.start();
-                try {
-                    t.join();
-                } catch(InterruptedException e) {
-                    System.err.println("Interrupted");
-                }
-
-                System.out.println("... End of executuion ");
+                });
+                daemon.setDaemon(true);
+                thread.start();
+                daemon.start();
             }
         }
-
-
-
 
