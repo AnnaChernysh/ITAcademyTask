@@ -32,7 +32,7 @@ public class Factory implements Runnable {
     public Map<String, Integer> throwDetails(int count){
         Map<String, Integer> map = new HashMap<>();
         for (int i = 0; i < count; i++) {
-            String put = String.valueOf(RequiredDetails.randomDetail());
+            String put = String.valueOf(Details.randomDetail());
             if(map.containsKey(put)) {
                 map.put(put, map.get(put) + 1);
             }else {

@@ -4,9 +4,11 @@ package lesson_18;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
+
 public class Scientist implements Runnable {
     GarbageDump dump;
-    Map<String, Integer> collectedDetails = new HashMap<>();
+
+    Map<String, Integer> collectDetails = new HashMap<>();
 
     @Override
     public void run() {
@@ -15,34 +17,36 @@ public class Scientist implements Runnable {
                 collect();
             }
             try {
-                Thread.sleep(100);
+                Thread.sleep(50);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
-        showRes();
+        showres();
     }
+
 
     public Scientist(GarbageDump dump) {
         this.dump = dump;
     }
 
     public void collect() {
-        dump.collectDetails(collectedDetails);
+        dump.collectDetails(collectDetails);
         dump.map.clear();
     }
 
-    public void showRes(){
-        if(!collectedDetails.isEmpty()) {
-            System.out.println("In overall the servant brought to the Scientist: ");
-            for (Map.Entry<String, Integer> entry : collectedDetails.entrySet()) {
+    public void showres(){
+        if(!collectDetails.isEmpty()) {
+
+            for (Map.Entry<String, Integer> entry : collectDetails.entrySet()) {
                 System.out.println(entry.getKey() + " " + entry.getValue());
             }
-            int res = collectedDetails.entrySet().stream()
+            int res = collectDetails.entrySet().stream()
                     .min(Comparator.comparingInt(Map.Entry::getValue))
                     .map(Map.Entry::getValue).orElse(0);
-            if (collectedDetails.size() == 9) {
-                System.out.println("In overall the Scientist made " + res + " robots");
+
+            if (collectDetails.size() == 10) {
+                System.out.println(res);
             }
         }
     }

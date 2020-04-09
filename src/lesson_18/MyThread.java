@@ -31,7 +31,7 @@ package lesson_18;
                     for(int i = 1; i < 10000000; i++){
                         System.out.println(MyThread.getSum());
                         try {
-                            Thread.sleep(5);
+                            Thread.sleep(50);
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
