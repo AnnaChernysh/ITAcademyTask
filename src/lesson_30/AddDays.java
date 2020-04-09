@@ -9,7 +9,7 @@ import java.time.temporal.Temporal;
 import java.time.temporal.TemporalAdjuster;
 
 
-public class CustomTemporalAdjuster implements TemporalAdjuster {
+public class AddDays implements TemporalAdjuster {
     @Override
     public Temporal adjustInto(Temporal temporal) {
     DayOfWeek dayOfWeek = DayOfWeek.of(temporal.get(ChronoField.DAY_OF_WEEK));
@@ -19,7 +19,7 @@ public class CustomTemporalAdjuster implements TemporalAdjuster {
 
 public static void main(String[]args) {
     LocalDate localDate = LocalDate.of(2020,3, 28);
-    CustomTemporalAdjuster temporalAdjuster = new CustomTemporalAdjuster();
+    AddDays temporalAdjuster = new AddDays();
     LocalDate newDate = localDate.with(temporalAdjuster);
 
     System.out.println(newDate);

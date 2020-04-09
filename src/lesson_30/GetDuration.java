@@ -5,12 +5,12 @@ import java.time.*;
 
 //Даны два объекта LocalDate из предыдущего задания.
  //  Подсчитать количество секунд между полуночью первой даты и полуночью второй даты.
-public class Task_06 {
+public class GetDuration {
     public static void main(String[] args) {
 
-        LocalDate today = LocalDate.now();
+        LocalDate today = LocalDate.of(2020, 6, 25);
 
-        LocalDate date1 = LocalDate.of(2020, 06, 25);
+        LocalDate date1 = LocalDate.of(2020, 6, 26);
 
         LocalDateTime localDateTime = today.atStartOfDay();
         System.out.println("localDateTime = " + localDateTime);
