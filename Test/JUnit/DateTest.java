@@ -19,7 +19,6 @@ public class DateTest {
         String dateInString = "25.06.2020";
 
         Assert.assertEquals(sdf.format(dateInString), "25.06.2020");
-
     }
 
     @Test

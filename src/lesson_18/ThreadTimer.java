@@ -15,7 +15,6 @@ import java.util.TimerTask;
             Timer timer = new Timer("MyTimer");
             timer.scheduleAtFixedRate(new ThreadTimer(), 0, 5);
         }
-
         @Override
         public void run() {
 

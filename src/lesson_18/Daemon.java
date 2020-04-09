@@ -21,7 +21,6 @@ public class Daemon extends Thread {
         daemon.setDaemon(true);
         daemon.start();
     }
-
     @Override
     public void run() {
 
